@@ -208,11 +208,8 @@ def main():
           os.getcwd()
           )
 
-    for a, w in zip(pathList, write_mode):
+    for a, w in zip(path_list, write_mode):
         run_report()
-
-    ##    my_info("Logged Files For Path " + a + "\n")
-    # import files as list
 
     file_dump = open(rfd + "file dump.txt")
     listfiledump = file_dump.readlines()
@@ -292,8 +289,6 @@ def main():
 
     if os.path.exists(reportname):
         os.startfile(reportname)
-        # test of autorun macro below
-        # os.startfile(runmacrofile)
         sys.exit()
 
 
