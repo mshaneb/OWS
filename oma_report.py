@@ -1,8 +1,7 @@
-## ! python3
 ##
-## test test test
+##
 
-import os, os.path
+import os
 import sys
 import csv
 import os.path
@@ -14,13 +13,11 @@ from datetime import datetime
 def main():
     temp = sys.stdout
 
-    pathList = [os.path.normpath("S:/HIGH RISK FACILITIES/"),
-                os.path.normpath("S:/FACILITY PROJECTS/FACILITY OPERATIONS - 5601/RDCF/")
-                ]
-
-    writeMode = ["w+",
-                 "a"
+    path_list = [os.path.normpath("S:/HIGH RISK FACILITIES/")
                  ]
+
+    write_mode = ["w+"
+                  ]
 
     rfd = str(os.getcwd() + "/Reports/Program_Files/")
     reportdir = str(os.getcwd() + "/Reports/")
@@ -30,127 +27,126 @@ def main():
         sys.stdout = temp
         print(str(info))
 
-    def file_dump_print(pathList):
+    def file_dump_print(path_list):
+        def write_path():
+            print(os.path.join(root, file).encode("ascii", "ignore"))
+
         sys.stdout = open(rfd + "file dump.txt", w)
         for root, dirs, files in os.walk(a):
             for file in files:
                 if file.endswith(".pdf"):
-                    print(os.path.join(root, file))
+                    write_path()
                 if file.endswith(".pptx"):
-                    print(os.path.join(root, file))
+                    write_path()
                 if file.endswith(".doc"):
-                    print(os.path.join(root, file))
+                    write_path()
                 if file.endswith(".docx"):
-                    print(os.path.join(root, file))
+                    write_path()
                 if file.endswith(".xlsx"):
-                    print(os.path.join(root, file))
+                    write_path()
 
-    def file_name_print(pathList):
+    def file_name_print(path_list):
+        def write_name():
+            print(str(os.path.splitext(file)[0].encode("ascii", "ignore")))
+
         sys.stdout = open(rfd + "file names.txt", w)
         for root, dirs, files in os.walk(a):
             for file in files:
                 if file.endswith(".pdf"):
-                    print(os.path.splitext(file)[0])
+                    write_name()
                 if file.endswith(".pptx"):
-                    print(os.path.splitext(file)[0])
+                    write_name()
                 if file.endswith(".doc"):
-                    print(os.path.splitext(file)[0])
+                    write_name()
                 if file.endswith(".docx"):
-                    print(os.path.splitext(file)[0])
+                    write_name()
                 if file.endswith(".xlsx"):
-                    print(os.path.splitext(file)[0])
+                    write_name()
 
-    def file_type_print(pathList):
+    def file_type_print(path_list):
+        def write_type():
+            print(os.path.splitext(file)[1])
         sys.stdout = open(rfd + "file type.txt", w)
         for root, dirs, files in os.walk(a):
             for file in files:
                 if file.endswith(".pdf"):
-                    print(os.path.splitext(file)[1])
+                    write_type()
                 if file.endswith(".pptx"):
-                    print(os.path.splitext(file)[1])
+                    write_type()
                 if file.endswith(".doc"):
-                    print(os.path.splitext(file)[1])
+                    write_type()
                 if file.endswith(".docx"):
-                    print(os.path.splitext(file)[1])
+                    write_type()
                 if file.endswith(".xlsx"):
-                    print(os.path.splitext(file)[1])
+                    write_type()
 
-    def file_rdcf_print(pathList):
+    def file_rdcf_print(path_list):
+        def write_rdcf():
+            if "RDCF" in file:
+                print("Yes")
+            else:
+                print("No")
+
         sys.stdout = open(rfd + "rdcf.txt", w)
         for root, dirs, files in os.walk(a):
             for file in files:
                 if file.endswith(".pdf"):
-                    if "RDCF" in file:
-                        print("Yes")
-                    else:
-                        print("No")
+                    write_rdcf()
                 if file.endswith(".pptx"):
-                    if "RDCF" in file:
-                        print("Yes")
-                    else:
-                        print("No")
+                    write_rdcf()
                 if file.endswith(".doc"):
-                    if "RDCF" in file:
-                        print("Yes")
-                    else:
-                        print("No")
+                    write_rdcf()
                 if file.endswith(".docx"):
-                    if "RDCF" in file:
-                        print("Yes")
-                    else:
-                        print("No")
+                    write_rdcf()
                 if file.endswith(".xlsx"):
-                    if "RDCF" in file:
-                        print("Yes")
-                    else:
-                        print("No")
+                    write_rdcf()
 
-    def file_folder_print(pathList):
+    def file_folder_print(path_list):
+        def write_folder():
+            print(os.path.join(root))
+
         sys.stdout = open(rfd + "folders.txt", w)
         for root, dirs, files in os.walk(a):
             for file in files:
                 if file.endswith(".pdf"):
-                    print(os.path.join(root))
+                    write_folder()
                 if file.endswith(".pptx"):
-                    print(os.path.join(root))
+                    write_folder()
                 if file.endswith(".doc"):
-                    print(os.path.join(root))
+                    write_folder()
                 if file.endswith(".docx"):
-                    print(os.path.join(root))
+                    write_folder()
                 if file.endswith(".xlsx"):
-                    print(os.path.join(root))
+                    write_folder()
 
-    def file_policy(pathList):
+    def file_policy(path_list):
+        def write_policy():
+            if "policy" in file:
+                print("Yes")
+            else:
+                print("No")
+
         sys.stdout = open(rfd + "policy.txt", w)
         for root, dirs, files, in os.walk(a):
             for file in files:
                 if file.endswith(".pdf"):
-                    if "policy" in file:
-                        print("Yes")
-                    else:
-                        print("No")
+                    write_policy()
                 if file.endswith(".pptx"):
-                    if "policy" in file:
-                        print("Yes")
-                    else:
-                        print("No")
+                    write_policy()
                 if file.endswith(".doc"):
-                    if "policy" in file:
-                        print("Yes")
-                    else:
-                        print("No")
+                    write_policy()
                 if file.endswith(".docx"):
-                    if "policy" in file:
-                        print("Yes")
-                    else:
-                        print("No")
+                    write_policy()
                 if file.endswith(".xlsx"):
-                    if "policy" in file:
-                        print("Yes")
-                    else:
-                        print("No")
+                    write_policy()
 
-    def file_date_created(pathList):
+    def file_date_created(path_list):
+        def write_datecreated():
+            filetimemod = datetime.fromtimestamp(
+                os.path.getctime(os.path.join(root, file))
+            )
+            print(str(filetimemod)[:4])
+
         sys.stdout = open(rfd + "date created.txt", w)
         for root, dirs, files, in os.walk(a):
             for file in files:
@@ -158,34 +154,26 @@ def main():
                 file_path.replace("\\\\", "/")  # tries to resolve "Error", doesn't work
                 if os.path.exists(file_path):
                     if file.endswith(".pdf"):
-                        filetimemod = datetime.fromtimestamp(
-                            os.path.getctime(os.path.join(root, file))
-                        )
-                        print(str(filetimemod)[:4])
+                        write_datecreated()
                     if file.endswith(".pptx"):
-                        filetimemod = datetime.fromtimestamp(
-                            os.path.getctime(os.path.join(root, file))
-                        )
-                        print(str(filetimemod)[:4])
+                        write_datecreated()
                     if file.endswith(".doc"):
-                        filetimemod = datetime.fromtimestamp(
-                            os.path.getctime(os.path.join(root, file))
-                        )
-                        print(str(filetimemod)[:4])
+                        write_datecreated()
                     if file.endswith(".docx"):
-                        filetimemod = datetime.fromtimestamp(
-                            os.path.getctime(os.path.join(root, file))
-                        )
-                        print(str(filetimemod)[:4])
+                        write_datecreated()
                     if file.endswith(".xlsx"):
-                        filetimemod = datetime.fromtimestamp(
-                            os.path.getctime(os.path.join(root, file))
-                        )
-                        print(str(filetimemod)[:4])
+                        write_datecreated()
                 else:
                     print("Error")
 
-    def file_date_modified(pathList):
+    def file_date_modified(path_list):
+        def write_datemodified():
+            if file.endswith(".pdf"):
+                datemodified = datetime.fromtimestamp(
+                    os.path.getmtime(os.path.join(root, file))
+                )
+                print(str(datemodified)[:4])
+
         sys.stdout = open(rfd + "date modified.txt", w)
         for root, dirs, files, in os.walk(a):
             for file in files:
@@ -193,53 +181,34 @@ def main():
                 file_path.replace("\\\\", "/")
                 if os.path.exists(file_path):
                     if file.endswith(".pdf"):
-                        datemodified = datetime.fromtimestamp(
-                            os.path.getmtime(os.path.join(root, file))
-                        )
-                        print(str(datemodified)[:4])
+                        write_datemodified()
                     if file.endswith(".pptx"):
-                        datemodified = datetime.fromtimestamp(
-                            os.path.getmtime(os.path.join(root, file))
-                        )
-                        print(str(datemodified)[:4])
+                        write_datemodified()
                     if file.endswith(".doc"):
-                        datemodified = datetime.fromtimestamp(
-                            os.path.getmtime(os.path.join(root, file))
-                        )
-                        print(str(datemodified)[:4])
+                        write_datemodified()
                     if file.endswith(".docx"):
-                        datemodified = datetime.fromtimestamp(
-                            os.path.getmtime(os.path.join(root, file))
-                        )
-                        print(str(datemodified)[:4])
+                        write_datemodified()
                     if file.endswith(".xlsx"):
-                        datemodified = datetime.fromtimestamp(
-                            os.path.getmtime(os.path.join(root, file))
-                        )
-                        print(str(datemodified)[:4])
+                        write_datemodified()
                 else:
                     print("Error")
 
     def run_report():
-        file_dump_print(pathList)
-        file_name_print(pathList)
-        file_type_print(pathList)
-        file_rdcf_print(pathList)
-        file_folder_print(pathList)
-        file_date_created(pathList)
-        file_date_modified(pathList)
-        file_policy(pathList)
+        file_dump_print(path_list)
+        file_name_print(path_list)
+        file_type_print(path_list)
+        file_rdcf_print(path_list)
+        file_folder_print(path_list)
+        file_date_created(path_list)
+        file_date_modified(path_list)
+        file_policy(path_list)
 
     print("Running OHRF Report",
           "/n",
           os.getcwd()
-          ##           "Path \"S:\\HIGH RISK FACILITIES\"",
-          ##           "\n",
-          ##           "Path \"S:\\FACILITY PROJECTS\FACILITY OPERATIONS - 5601\RDCF\"",
-          ##           "\n"
           )
 
-    for a, w in zip(pathList, writeMode):
+    for a, w in zip(pathList, write_mode):
         run_report()
 
     ##    my_info("Logged Files For Path " + a + "\n")
@@ -307,7 +276,7 @@ def main():
 
     reporttimestamp = str(time.ctime(int(time.time()))).replace(":", "_")
     reportname = (reportdir + "OHRF_Report_" + reporttimestamp + ".csv")
-    #runmacrofile = str(rfd + "Master.xlsm")
+    # runmacrofile = str(rfd + "Master.xlsm")
 
     with open(reportname, "w+", newline="") as f:
         writer = csv.writer(f)
@@ -324,10 +293,9 @@ def main():
     if os.path.exists(reportname):
         os.startfile(reportname)
         # test of autorun macro below
-        #os.startfile(runmacrofile)
+        # os.startfile(runmacrofile)
         sys.exit()
 
 
 if __name__ == "__main__":
     main()
-
