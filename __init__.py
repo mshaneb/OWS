@@ -72,4 +72,4 @@ ohrfbtn.grid(row = 1, column = 1, padx = "20", pady = "5")
 
 #test ends above here
 
-mainloop()
+window.mainloop()
