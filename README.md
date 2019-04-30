@@ -28,9 +28,9 @@ INSTRUCTIONS:
 Currently, the report generated will be presented in an unformatted manner so that technical writers can sort and filter as
 they see fit. If desired, auto-formatting can be incorporated into a future update.
 
-It is important to note that some columns/cells will appear to be BLANK upon intial opening of the document due to the way 
+It is important to note that some columns/cells will appear to be BLANK upon initial opening of the document due to the way
 Excel imports CSV files. In order to display all content with no additional formatting, highlight all cells, then click and 
-unclick WRAP TEXT button. 
+un-click WRAP TEXT button.
 
 
 KNOWN BUGS AND ISSUES:
