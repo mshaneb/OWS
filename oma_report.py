@@ -272,7 +272,7 @@ def main():
                ]
 
     reporttimestamp = str(time.ctime(int(time.time()))).replace(":", "_")
-    reportname = (reportdir + "OHRF_Report_" + reporttimestamp + ".csv")
+    reportname = (reportdir + "OMA_Report_" + reporttimestamp + ".csv")
     # runmacrofile = str(rfd + "Master.xlsm")
 
     with open(reportname, "w+", newline="") as f:
