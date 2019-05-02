@@ -25,6 +25,7 @@ def main():
         print(str(info))
 
     def file_dump_print(path_list):
+
         def write_path():
             print(os.path.join(root, file).encode("ascii", "ignore"))
 
@@ -43,6 +44,7 @@ def main():
                     write_path()
 
     def file_name_print(path_list):
+
         def write_name():
             print(str(os.path.splitext(file)[0].encode("ascii", "ignore")))
 
@@ -61,6 +63,7 @@ def main():
                     write_name()
 
     def file_type_print(path_list):
+
         def write_type():
             print(os.path.splitext(file)[1])
 
@@ -79,6 +82,7 @@ def main():
                     write_type()
 
     def file_rdcf_print(path_list):
+
         def write_rdcf():
             if "RDCF" in file:
                 print("Yes")
@@ -100,8 +104,9 @@ def main():
                     write_rdcf()
 
     def file_folder_print(path_list):
+
         def write_folder():
-            print(os.path.join(root))
+            print(os.path.join(root).encode("utf-8"))
 
         sys.stdout = open(rfd + "folders.txt", w)
         for root, dirs, files in os.walk(a):
@@ -118,6 +123,7 @@ def main():
                     write_folder()
 
     def file_policy(path_list):
+
         def write_policy():
             if "policy" in file:
                 print("Yes")
@@ -139,6 +145,7 @@ def main():
                     write_policy()
 
     def file_date_created(path_list):
+
         def write_datecreated():
             filetimemod = datetime.fromtimestamp(
                 os.path.getctime(os.path.join(root, file))
@@ -165,12 +172,14 @@ def main():
                     print("Error")
 
     def file_date_modified(path_list):
+
         def write_datemodified():
             if file.endswith(".pdf"):
                 datemodified = datetime.fromtimestamp(
                     os.path.getmtime(os.path.join(root, file))
                 )
                 print(str(datemodified)[:4])
+
         sys.stdout = open(rfd + "date modified.txt", w)
         for root, dirs, files, in os.walk(a):
             for file in files:
