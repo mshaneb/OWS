@@ -4,7 +4,7 @@
 
 import os
 import ohrf_report
-import custom_report
+import sramb_report
 from tkinter import *
 from tkinter import Menu
 
@@ -47,8 +47,8 @@ ohrfbtn = Button(window, text="OHRF", command=ohrf_report.main)
 ohrfbtn.grid(row=1, column=1, padx="20", pady="5")
 # omabtn = Button(window, text = "OMA", command = ohrf_report.main)
 # omabtn.grid(row = 2, column = 1, padx = "20", pady = "5")
-# srambbtn = Button(window, text = "OWS All", command = ohrf_report.main)
-# srambbtn.grid(row = 4, column = 1, padx = "20", pady = "5")
+srambbtn = Button(window, text = "OWS All", command = ohrf_report.main)
+srambbtn.grid(row = 4, column = 1, padx = "20", pady = "5")
 
 # file type check button
 # below here starts the test
