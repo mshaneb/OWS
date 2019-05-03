@@ -1,10 +1,9 @@
-# OWS
 OWS File Index Utility
 
 INTRODUCTION:
 -------------
 
-The OHRF File Indec was developed to allow for an efficient way to view, organize, and export an index of all files
+The OHRF File Index Utility was developed to allow for an efficient way to view, organize, and export an index of all files
 on the OWS shared drive that are relevant to the Office of High-Risk Facilities, in order to aid the OWS/OCGR Communications 
 Effort and facilitate identification of files with the potential to be hosted on the NIAID Intranet. It is designed to be an
 easily-accessible .EXE program located on the OWS Shared Drive (S:\) and needing no special permissions to access or use. 
