@@ -13,22 +13,6 @@ from tkinter import Menu
 def openreadme():
     os.startfile("readme.txt")
 
-def var_states():
-    var1.get()
-    var2.get()
-    var3.get()
-    var4.get()
-    var5.get()
-    var6.get()
-    var7.get()
-    # path1.get()
-    # path2.get()
-    # path3.get()
-    # path4.get()
-    # path5.get()
-    # path6.get()
-
-
 window = Tk()
 window.title("OWS File Index Utility")
 window.geometry("500x500")
@@ -86,7 +70,25 @@ keywordsinfo = Label(window, text = "Keywords:")
 keywordsinfo.grid(row = 15, column = 0, pady = (15, 0))
 keywords = Entry(window).grid(row = 16, column = 0)
 
-runbtn = Button(window, text = "Run Report", command = print(var1.get()))
+def var_states():
+    print(var1.get())
+    print(var2.get())
+    print(var3.get())
+    print(var4.get())
+    print(var5.get())
+    print(var6.get())
+    print(var7.get())
+    #path1.get()
+    # path2.get()
+    # path3.get()
+    # path4.get()
+    # path5.get()
+    # path6.get()
+    # print(str(keywords.get()))
+
+
+
+runbtn = Button(window, text = "Run Report", command = var_states)
 runbtn.grid(row=17, column=0, pady="5")
 # test ends above here
 
