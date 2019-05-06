@@ -6,6 +6,7 @@ import os
 import ohrf_report
 import sramb_report
 import ows_report
+import custom_report
 from tkinter import *
 from tkinter import Menu
 
@@ -13,6 +14,7 @@ from tkinter import Menu
 def openreadme():
     os.startfile("readme.txt")
 
+# may need to move this to custom_report.py
 def var_states():
     var1.get()
     var2.get()
@@ -56,37 +58,37 @@ owsbtn.grid(row = 5, column = 1, padx = "20", pady = "5")
 # file type check button
 # below here starts the test
 
-# checkboxinfo = Label(window, text = "Check any combination of boxes to filter by extension:")
-# checkboxinfo.grid(row = 0, sticky = W)
-# var1 = IntVar()
-# Checkbutton(window, text = "All", variable = var1).grid(row=1, column = 0, sticky = W)
-# var2 = IntVar()
-# Checkbutton(window, text = "PDF", variable = var2).grid(row=2, column = 0, sticky = W)
-# var3 = IntVar()
-# Checkbutton(window, text = "PowerPoint", variable = var3).grid(row=3, column = 0, sticky = W)
-# var4 = IntVar()
-# Checkbutton(window, text = "Word", variable = var4).grid(row=4, column = 0, sticky = W)
-# var5 = IntVar()
-# Checkbutton(window, text = "Excel", variable = var5).grid(row=5, column = 0, sticky = W)
-# var6 = IntVar()
-# Checkbutton(window, text = "Images", variable = var6).grid(row=6, column = 0, sticky = W)
-# var7 = IntVar()
-# Checkbutton(window, text = "Drawings (DWGs Only)", variable =7).grid(row=7, column = 0, sticky = W)
-# filepathinfo = Label(window, text = "Enter up to 6 directories manually:")
-# filepathinfo.grid(row = 8, column = 0, pady = (5, 0))
-# path1 = Entry(window).grid(row = 9, column = 0)
-# path2 = Entry(window).grid(row = 10, column = 0)
-# path3 = Entry(window).grid(row = 11, column = 0)
-# path4 = Entry(window).grid(row = 12, column = 0)
-# path5 = Entry(window).grid(row = 13, column = 0)
-# path6 = Entry(window).grid(row = 14, column = 0)
+checkboxinfo = Label(window, text = "Check any combination of boxes to filter by extension:")
+checkboxinfo.grid(row = 0, sticky = W)
+var1 = IntVar()
+Checkbutton(window, text = "All", variable = var1).grid(row=1, column = 0, sticky = W)
+var2 = IntVar()
+Checkbutton(window, text = "PDF", variable = var2).grid(row=2, column = 0, sticky = W)
+var3 = IntVar()
+Checkbutton(window, text = "PowerPoint", variable = var3).grid(row=3, column = 0, sticky = W)
+var4 = IntVar()
+Checkbutton(window, text = "Word", variable = var4).grid(row=4, column = 0, sticky = W)
+var5 = IntVar()
+Checkbutton(window, text = "Excel", variable = var5).grid(row=5, column = 0, sticky = W)
+var6 = IntVar()
+Checkbutton(window, text = "Images", variable = var6).grid(row=6, column = 0, sticky = W)
+var7 = IntVar()
+Checkbutton(window, text = "Drawings (DWGs Only)", variable =7).grid(row=7, column = 0, sticky = W)
+filepathinfo = Label(window, text = "Enter up to 6 directories manually:")
+filepathinfo.grid(row = 8, column = 0, pady = (5, 0))
+path1 = Entry(window).grid(row = 9, column = 0)
+path2 = Entry(window).grid(row = 10, column = 0)
+path3 = Entry(window).grid(row = 11, column = 0)
+path4 = Entry(window).grid(row = 12, column = 0)
+path5 = Entry(window).grid(row = 13, column = 0)
+path6 = Entry(window).grid(row = 14, column = 0)
 
-# keywordsinfo = Label(window, text = "Keywords:")
-# keywordsinfo.grid(row = 15, column = 0, pady = (15, 0))
-# keywords = Entry(window).grid(row = 16, column = 0)
+keywordsinfo = Label(window, text = "Keywords:")
+keywordsinfo.grid(row = 15, column = 0, pady = (15, 0))
+keywords = Entry(window).grid(row = 16, column = 0)
 
-# runbtn = Button(window, text = "Run Report", command = print(var_states()))
-# runbtn.grid(row=17, column=0, pady="5")
+runbtn = Button(window, text = "Run Report", command = custom_report.main)
+runbtn.grid(row=17, column=0, pady="5")
 # test ends above here
 
 mainloop()
