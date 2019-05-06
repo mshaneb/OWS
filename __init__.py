@@ -6,9 +6,9 @@ import os
 import ohrf_report
 import sramb_report
 import ows_report
+import custom_report
 from tkinter import *
 from tkinter import Menu
-
 
 def openreadme():
     os.startfile("readme.txt")
@@ -77,7 +77,6 @@ keywordsinfo.grid(row = 15, column = 0, pady = (15, 0))
 keywords = Entry(window)
 keywords.grid(row = 16, column = 0)
 
-
 def var_states():
     var1.get()
     var2.get()
@@ -94,9 +93,7 @@ def var_states():
     path6.get()
     keywords.get()
 
-
-
-runbtn = Button(window, text = "Run Report", command = var_states)
+runbtn = Button(window, text = "Run Report", command = var_states and custom_report)
 runbtn.grid(row=17, column=0, pady="5")
 # test ends above here
 

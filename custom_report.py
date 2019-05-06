@@ -10,17 +10,27 @@ import csv
 import os.path
 import time
 import datetime
+from __init__ import *
 from datetime import datetime
 
 
 def main():
     temp = sys.stdout
 
-    pathList = [os.path.normpath("S:/HIGH RISK FACILITIES/"),
-                os.path.normpath("S:/FACILITY PROJECTS/FACILITY OPERATIONS - 5601/RDCF/")
+    pathList = [os.path.normpath(str(path1.get())),
+                os.path.normpath(str(path2.get())),
+                os.path.normpath(str(path3.get())),
+                os.path.normpath(str(path4.get())),
+                os.path.normpath(str(path5.get())),
+                os.path.normpath(str(path6.get()))
                 ]
 
+#this is going to have to be changed based on amount of file paths
     writeMode = ["w+",
+                 "a",
+                 "a",
+                 "a",
+                 "a",
                  "a"
                  ]
 
@@ -234,7 +244,7 @@ def main():
 
     print("Running Custom Report",
           "/n",
-          os.getcwd()
+          pathList
           ##           "Path \"S:\\HIGH RISK FACILITIES\"",
           ##           "\n",
           ##           "Path \"S:\\FACILITY PROJECTS\FACILITY OPERATIONS - 5601\RDCF\"",
@@ -249,18 +259,25 @@ def main():
 
     file_dump = open(rfd + "file dump.txt")
     listfiledump = file_dump.readlines()
+
     file_names = open(rfd + "file names.txt")
     listfilenames = file_names.readlines()
+
     file_type = open(rfd + "file type.txt")
     listfiletype = file_type.readlines()
+
     file_rdcf = open(rfd + "rdcf.txt")
     listrdcf = file_rdcf.readlines()
+
     file_folders = open(rfd + "folders.txt")
     listfolders = file_folders.readlines()
+
     file_date_created = open(rfd + "date created.txt")
     listdatecreated = file_date_created.readlines()
+
     file_date_modified = open(rfd + "date modified.txt")
     listdatemodified = file_date_modified.readlines()
+
     file_policy = open(rfd + "policy.txt")
     listpolicy = file_policy.readlines()
 
