@@ -12,16 +12,25 @@ filename, dates created/modified, file type, folder, or if the document relates 
 The resulting spreadsheet is a normal Microsoft Excel file that can be modified, edited, and shared just as any other 
 document.
 
-"OHRF Report" currently searches the following directories (can be amended as needed):
+"OHRF" currently searches the following directories (can be amended as needed):
 	1. S:\\HIGH RISK FACILITIES\
 	2. S:\\FACILITY PROJECTS\FACILITY OPERATIONS - 5601\RDCF\
+
+"OWS ALL" currently searches the following directories:
+    1. S:\\
+
+"SRAMB" currently searches the following directories:
+    1. S:\SRAMB
+
+"OMA" currently searches the following directores:
+    1. S:\Office of Management and Analytics (OMA)
 
 
 INSTRUCTIONS:
 -------------
 
 	1. Click "OHRF Report" button on right side of program window underneath "OrChoose Report:"
-	2. Wait as report runs - it takes about a minute to generate each report
+	2. Wait as report runs - it takes several minutes for each report to run ("OWS ALL" takes several hours)
 	4. Report will open automatically in Excel
 
 Currently, the report generated will be presented in an unformatted manner so that technical writers can sort and filter as
