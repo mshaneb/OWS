@@ -26,7 +26,7 @@ helpmenu.add_command(label="Quit", command=window.quit)
 # menu.add_command(label = "Custom Report")
 # menu.add_command(label = "Existing Report")
 
-runohrflabel = Label(window, text="Choose Report:")  # add "or" to str later
+runohrflabel = Label(window, text="Or, Choose Report:")  # add "or" to str later
 runohrflabel.grid(row=0, column=1, padx="60")
 ohrfbtn = Button(window, text="OHRF", command=ohrf_report.main)
 ohrfbtn.grid(row=1, column=1, padx="20", pady="5")
