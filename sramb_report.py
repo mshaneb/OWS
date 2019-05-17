@@ -29,6 +29,12 @@ def main():
     def file_dump_print(path_list):
         def write_path():
             print(os.path.join(root, file).encode("ascii", "ignore"))
+            """
+            this .encode thing above is the only way i could get this text
+            to print, although this causes the condition where all strs are 
+            printed as b''
+            which is an issue i cannot figure out how to resolve as of 5/17/19
+            """
 
         sys.stdout = open(rfd + "file dump.txt", w)
         for root, dirs, files in os.walk(a):
