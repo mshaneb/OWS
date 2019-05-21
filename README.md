@@ -1,5 +1,3 @@
-OWS File Index Utility
-
 INTRODUCTION:
 -------------
 
@@ -13,11 +11,11 @@ The resulting spreadsheet is a normal Microsoft Excel file that can be modified,
 document.
 
 "OHRF" currently searches the following directories (can be amended as needed):
-	1. S:\\HIGH RISK FACILITIES\
-	2. S:\\FACILITY PROJECTS\FACILITY OPERATIONS - 5601\RDCF\
+	1. S:\HIGH RISK FACILITIES\
+	2. S:\FACILITY PROJECTS\FACILITY OPERATIONS - 5601\RDCF\
 
 "OWS ALL" currently searches the following directories:
-    1. S:\\
+    1. S:\
 
 "SRAMB" currently searches the following directories:
     1. S:\SRAMB
@@ -29,16 +27,19 @@ document.
 INSTRUCTIONS:
 -------------
 
-	1. Click "OHRF Report" button on right side of program window underneath "OrChoose Report:"
+	1. Select desired report under "Or, Choose Report:" - custom report functionality not available
 	2. Wait as report runs - it takes several minutes for each report to run ("OWS ALL" takes several hours)
 	4. Report will open automatically in Excel
 
 Currently, the report generated will be presented in an unformatted manner so that technical writers can sort and filter as
-they see fit. If desired, auto-formatting can be incorporated into a future update.
+they see fit. Auto-formatting will be incorporated into a future update.
 
 It is important to note that some columns/cells will appear to be BLANK upon initial opening of the document due to the way
 Excel imports CSV files. In order to display all content with no additional formatting, highlight all cells, then click and 
 un-click WRAP TEXT button.
+
+An Excel macro designed to format the report will be located in the source folder; please send suggested improvements
+and comments to brownms2@mail.nih.gov
 
 
 KNOWN BUGS AND ISSUES:
@@ -46,6 +47,7 @@ KNOWN BUGS AND ISSUES:
 
  * In some instances the "Date Created" and "Last Modified" fields are not able to be populated, and are
 	set to return "Error"for those fields. Unsure why this is.
+ * In the "OWS Report" and "SRAMB Report" functions, some text is located within "b' '". This is due to an encoding error.
 
 
 FUTURE IMPROVEMENTS:
