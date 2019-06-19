@@ -26,7 +26,7 @@ helpmenu.add_command(label="Quit", command=window.quit)
 # menu.add_command(label = "Custom Report")
 # menu.add_command(label = "Existing Report")
 
-runohrflabel = Label(window, text="Or, Choose Report:")  # add "or" to str later
+runohrflabel = Label(window, text="Choose Report:")  # add "or" to str later
 runohrflabel.grid(row=0, column=1, padx="60")
 ohrfbtn = Button(window, text="OHRF", command=ohrf_report.main)
 ohrfbtn.grid(row=1, column=1, padx="20", pady="5")
@@ -40,7 +40,7 @@ owsbtn.grid(row = 5, column = 1, padx = "20", pady = "5")
 
 # file type check button
 # below here starts the test
-
+"""
 checkboxinfo = Label(window, text = "Check any combination of boxes to filter by extension:")
 checkboxinfo.grid(row = 0, sticky = W)
 var1 = IntVar()
@@ -99,5 +99,6 @@ def var_states():
 runbtn = Button(window, text = "Run Report", command = var_states)
 runbtn.grid(row=17, column=0, pady="5")
 # test ends above here
+"""
 
 mainloop()
