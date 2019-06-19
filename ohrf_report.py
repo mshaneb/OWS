@@ -232,13 +232,14 @@ def main():
         file_date_modified(pathList)
         file_policy(pathList)
 
-    print("Running OHRF Report",
-          "/n",
-          os.getcwd()
-          ##           "Path \"S:\\HIGH RISK FACILITIES\"",
-          ##           "\n",
-          ##           "Path \"S:\\FACILITY PROJECTS\FACILITY OPERATIONS - 5601\RDCF\"",
-          ##           "\n"
+    print("********** \n"
+          "Running ***OHRF Report*** in:\n",
+          "\n"
+          r"Path \"S:\\HIGH RISK FACILITIES\"",
+          "\n",
+          r"Path \"S:\\FACILITY PROJECTS\FACILITY OPERATIONS - 5601\RDCF\"",
+          "\n",
+          "**********"
           )
 
     for a, w in zip(pathList, writeMode):
