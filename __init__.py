@@ -11,7 +11,7 @@ from tkinter import Menu
 
 
 def openreadme():
-    os.startfile("readme.txt")
+    os.startfile("readme.md")
 
 window = Tk()
 window.title("OWS File Index Utility")
