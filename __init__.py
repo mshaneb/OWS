@@ -33,8 +33,8 @@ ohrfbtn.grid(row=1, column=1, padx="20", pady="5")
 # uncomment below once oma_report is done
 # omabtn = Button(window, text = "OMA", command = ohrf_report.main)
 # omabtn.grid(row = 2, column = 1, padx = "20", pady = "5")
-srambbtn = Button(window, text = "SRAMB", command = sramb_report.main)
-srambbtn.grid(row = 4, column = 1, padx = "20", pady = "5")
+# srambbtn = Button(window, text = "SRAMB", command = sramb_report.main)
+# srambbtn.grid(row = 4, column = 1, padx = "20", pady = "5")
 owsbtn = Button(window, text = "OWS All", command = ows_report.main)
 owsbtn.grid(row = 5, column = 1, padx = "20", pady = "5")
 
