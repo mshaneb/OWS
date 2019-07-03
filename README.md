@@ -23,16 +23,16 @@ document.
 "OMA" currently searches the following directores:
     1. S:\Office of Management and Analytics (OMA)
 
+Currently, only the "OHRF" functionality is in production, with the others being tweaked and refined.
 
 INSTRUCTIONS:
 -------------
 
-	1. Select desired report under "Or, Choose Report:" - custom report functionality not available
+	1. Select desired report under "Choose Report:" - custom report functionality not available
 	2. Wait as report runs - it takes several minutes for each report to run ("OWS ALL" takes several hours)
 	4. Report will open automatically in Excel
 
-Currently, the report generated will be presented in an unformatted manner so that technical writers can sort and filter as
-they see fit. Auto-formatting will be incorporated into a future update.
+Currently, the report generated will be presented in an unformatted manner. Auto-formatting will be incorporated into a future update.
 
 It is important to note that some columns/cells will appear to be BLANK upon initial opening of the document due to the way
 Excel imports CSV files. In order to display all content with no additional formatting, highlight all cells, then click and 
